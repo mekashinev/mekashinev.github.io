@@ -1670,3 +1670,24 @@
 .fa-meanpath:before {
   content: "\f20c";
 }
+
+
+./newcode ./
+
+
+
+.btn-circle {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 25px;
+    font-size: 20px;
+    color: white;
+    background-color: blue;
+}
+
+.btn-circle i {
+    line-height: 50px;
+    font-size: 20px;
+}
