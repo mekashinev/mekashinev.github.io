@@ -55,6 +55,29 @@
     }
 </style>
 
+<style>
+.floating-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  border-radius: 50%;
+  background-color: green;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  transform: translateY(0);
+}
+
+.floating-whatsapp:active {
+  transform: translateY(5px);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+</style>
+
+<a href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER&text=Hello" class="floating-whatsapp">
+  <img src="https://image.flaticon.com/icons/svg/134/134937.svg" width="50" height="50">
+</a>
+
 
 
 <div class="card-group">
