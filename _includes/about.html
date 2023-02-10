@@ -1,7 +1,70 @@
     <!-- About Section -->
 <section id="about" class="container content-section text-center">
 <div class="row">
-    <div class="col-lg-12">
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $("a").click(function(){
+            $("img").removeClass("animated bounceIn");
+            $(this).children("img").addClass("animated bounceIn");
+        });
+    });
+</script>
+
+<style>
+    .animated {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    
+    @-webkit-keyframes bounceIn {
+        0% {
+            -webkit-transform: scale(0);
+        }
+        50% {
+            -webkit-transform: scale(1.5);
+        }
+        100% {
+            -webkit-transform: scale(1);
+        }
+    }
+    
+    @keyframes bounceIn {
+        0% {
+            transform: scale(0);
+        }
+        50% {
+            transform: scale(1.5);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    
+    .bounceIn {
+        -webkit-animation-name: bounceIn;
+        animation-name: bounceIn;
+    }
+</style>
+
+<div class="col-lg-12">
+    <a href="#link1" style="display: block; width: 100%;">
+        <img src="img/ml1.png" class="img-center">
+    </a>
+    <a href="#link2" style="display: block; width: 100%;">
+        <img src="img/ml2.png" class="img-center">
+    </a>
+    <a href="#link3" style="display: block; width: 100%;">
+        <img src="img/ml3.png" class="img-center">
+    </a>
+    <a href="#link4" style="display: block; width: 100%;">
+        <img src="img/ml4.png" class="img-center">
+    </a>
+</div>
+   <div class="col-lg-12">
          <a href="#link1" style="display: block; width: 100%;">
             <img src="img/ml1.png" class="img-center">
          </a>
