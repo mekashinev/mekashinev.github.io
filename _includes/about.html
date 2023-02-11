@@ -84,57 +84,6 @@
   <div class="collage-item item9"></div>
 </div>
 
-<html>
-  <head>
-    <style>
-      .slider {
-        width: 100%;
-        overflow: hidden;
-      }
-
-      img {
-        width: 25%;
-        height: auto;
-        float: left;
-        animation: slide 8s linear infinite;
-        opacity: 1;
-        transition: opacity 1s;
-      }
-
-      @keyframes slide {
-        0% {
-          transform: translateX(0%);
-        }
-        100% {
-          transform: translateX(-300%);
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="slider">
-  <img src="img/ml7.png">
-  <img src="img/ml8.png">
-  <img src="img/ml9.png">
-  <img src="img/ml6.png">
-  <img src="img/ml5.png">
-  <img src="img/ml7.png">
-
-      </div>
-
-    <script>
-      const images = document.querySelectorAll('.slider img');
-
-      images.forEach((img) => {
-        img.addEventListener('animationend', function () {
-          this.style.opacity = 0;
-        });
-      });
-    </script>
-    </html>
-
-
-
 
 <section id="about" class="container content-section text-center">
     <div class="row">
@@ -156,6 +105,40 @@
     </a>
   </div>
   <!-- Agrega más elementos aquí si es necesario -->
+</div>
+
+<style>
+  .slider {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .slider img {
+    animation: slide infinite 20s linear;
+    width: 100%;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .slider img:last-child {
+    animation-delay: -20s;
+  }
+</style>
+
+<div class="slider">
+  <img src="img/ml7.png">
+  <img src="img/ml8.png">
+  <img src="img/ml9.png">
+  <img src="img/ml6.png">
+  <img src="img/ml.png">
 </div>
 
   
