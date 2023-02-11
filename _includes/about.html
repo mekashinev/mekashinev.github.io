@@ -108,38 +108,68 @@
 </div>
 
 <style>
-  .slider {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-  }
+.slider {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
 
-  .slider img {
-    animation: slide infinite 20s linear;
-    width: 100%;
-  }
+.slide {
+  width: 200%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: slide 20s linear infinite;
+}
 
-  @keyframes slide {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
+.slide img {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
 
-  .slider img:last-child {
-    animation-delay: -20s;
+@keyframes slide {
+  0% {
+    transform: translateX(0);
   }
+  20% {
+    transform: translateX(0);
+  }
+  21% {
+    transform: translateX(-50%);
+  }
+  41% {
+    transform: translateX(-50%);
+  }
+  42% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 </style>
 
 <div class="slider">
-  <img src="img/ml7.png">
-  <img src="img/ml8.png">
-  <img src="img/ml9.png">
-  <img src="img/ml6.png">
-  <img src="img/ml.png">
+  <div class="slide">
+    <img src="img/ml6.png" alt="Image 1">
+  </div>
+  <div class="slide">
+    <img src="img/ml7.png" alt="Image 2">
+  </div>
+  <div class="slide">
+    <img src="img/ml8.png" alt="Image 3">
+  </div>
+  <div class="slide">
+    <img src="img/ml9.png" alt="Image 4">
+  </div>
+  <div class="slide">
+    <img src="img/ml2.png" alt="Image 5">
+  </div>
 </div>
+
 
   
             <h2>About Grayscal</h2>
