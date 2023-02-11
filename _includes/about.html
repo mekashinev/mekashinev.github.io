@@ -84,65 +84,73 @@
 .collage {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .collage-item {
-  width: 33.33%;
-  height: 200px;
-  background-size: cover;
-  background-repeat: no-repeat;
+  width: calc(33.33% - 20px);
+  height: 0;
+  padding-bottom: calc(33.33% - 20px);
+  margin: 10px;
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.collage-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .item1 {
-background-image: url(img/ml1.png);
+  background-image: url('img/ml1.png');
 }
 
 .item2 {
-background-image: url(img/ml2.png);
+  background-image: url('img/ml2.png');
 }
 
 .item3 {
-background-image: url(img/ml3.png);
+  background-image: url('img/ml3.png');
 }
 
 .item4 {
-background-image: url(img/ml4.png);
+  background-image: url('img/image4.jpg');
 }
 
 .item5 {
-background-image: url(img/ml5.png);
+  background-image: url('img/image5.jpg');
 }
 
 .item6 {
-background-image: url(img/ml6.png);
+  background-image: url('img/image6.jpg');
 }
 
 .item7 {
-background-image: url(img/ml7.png);
+  background-image: url('img/image7.jpg');
 }
 
 .item8 {
-background-image: url(img/ml8.png);
+  background-image: url('img/image8.jpg');
 }
 
 .item9 {
-background-image: url(img/ml9.png);
+  background-image: url('img/image9.jpg');
 }
 </style>
 
 <div class="collage">
-  <a href="#link1"><div class="collage-item item1"></div></a>
-  <a href="#link2"><div class="collage-item item2"></div></a>
-  <a href="#link3"><div class="collage-item item3"></div></a>
-  <a href="#link4"><div class="collage-item item4"></div></a>
-  <a href="#link5"><div class="collage-item item5"></div></a>
-  <a href="#link6"><div class="collage-item item6"></div></a>
-  <a href="#link7"><div class="collage-item item7"></div></a>
-  <a href="#link8"><div class="collage-item item8"></div></a>
-  <a href="#link9"><div class="collage-item item9"></div></a>
+  <div class="collage-item item1"></div>
+  <div class="collage-item item2"></div>
+  <div class="collage-item item3"></div>
+  <div class="collage-item item4"></div>
+  <div class="collage-item item5"></div>
+  <div class="collage-item item6"></div>
+  <div class="collage-item item7"></div>
+  <div class="collage-item item8"></div>
+  <div class="collage-item item9"></div>
 </div>
-
 
 
 
