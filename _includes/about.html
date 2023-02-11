@@ -56,38 +56,26 @@
 </style>
 
 <style>
-.floating-button {
+.floating-whatsapp {
   position: fixed;
-  top: 20px;
+  bottom: 20px;
+  right: 20px;
   z-index: 100;
   border-radius: 50%;
+  background-color: green;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
   transform: translateY(0);
 }
 
-.floating-button:active {
-  transform: translateY(-5px);
+.floating-whatsapp:active {
+  transform: translateY(5px);
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.floating-whatsapp {
-  right: 20px;
-  background-color: green;
-}
-
-.floating-call {
-  right: 80px;
-  background-color: blue;
 }
 </style>
 
-<a href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER&text=Hello" class="floating-button floating-whatsapp">
-  <img src="https://image.flaticon.com/icons/svg/134/134937.svg" width="50" height="50">
-</a>
-
-<a href="tel:YOUR_PHONE_NUMBER" class="floating-button floating-call">
-  <img src="https://image.flaticon.com/icons/svg/1380/1380338.svg" width="50" height="50">
+<a href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER&text=Hello" class="floating-whatsapp">
+  <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" width="50" height="50">
 </a>
 
 
