@@ -107,6 +107,33 @@
   <!-- Agrega más elementos aquí si es necesario -->
 </div>
 
+<style>
+  .slider {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .slider img {
+    animation: slide infinite 20s linear;
+    width: 100%;
+  }
+
+  @keyframes slide {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+</style>
+
+<div class="slider">
+  <img src="image1.jpg">
+  <img src="image2.jpg">
+  <img src="image3.jpg">
+</div>
 
   
             <h2>About Grayscal</h2>
