@@ -84,7 +84,7 @@
   <div class="collage-item item9"></div>
 </div>
 
-<style>
+    <style>
       .slider {
         width: 100%;
         overflow: hidden;
@@ -104,20 +104,31 @@
           transform: translateX(0%);
         }
         100% {
-          transform: translateX(-200%);
+          transform: translateX(-300%);
         }
       }
     </style>
   </head>
-  <body>
+  <body>  
     <div class="slider">
-  <img src="img/ml7.png">
-  <img src="img/ml8.png">
-  <img src="img/ml9.png">
-  <img src="img/ml6.png">
-  <img src="img/ml5.png">
-  <img src="img/ml7.png">
+    <img src="img/ml7.png">
+    <img src="img/ml8.png">
+    <img src="img/ml9.png">
+    <img src="img/ml6.png">
+    <img src="img/ml5.png">
+    <img src="img/ml7.png">
     </div>
+
+    <script>
+      const images = document.querySelectorAll('.slider img');
+
+      images.forEach((img) => {
+        img.addEventListener('animationend', function () {
+          this.style.opacity = 0;
+        });
+      });
+    </script>
+
 
     <script>
       const images = document.querySelectorAll('.slider img');
