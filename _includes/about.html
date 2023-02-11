@@ -120,12 +120,16 @@
   }
 
   @keyframes slide {
-    from {
+    0% {
       transform: translateX(0%);
     }
-    to {
+    100% {
       transform: translateX(-100%);
     }
+  }
+
+  .slider img:last-child {
+    animation-delay: -20s;
   }
 </style>
 
