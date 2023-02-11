@@ -1,88 +1,54 @@
     <!-- About Section -->
 
-<style>
-.collage {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-}
+<html>
+  <head>
+    <style>
+      .slideshow {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 300px;
+      }
 
-.collage-item {
-  width: calc(33.33% - 20px);
-  height: 0;
-  padding-bottom: calc(33.33% - 20px);
-  margin: 10px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
-}
+      .slideshow img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slideshow">
+      <img src="img/ml1.png" alt="Image 1">
+      <img src="img/ml2.png" alt="Image 2">
+      <img src="img3.jpg" alt="Image 3">
+      <img src="img4.jpg" alt="Image 4">
+      <img src="img5.jpg" alt="Image 5">
+    </div>
+    <script>
+      const slideshow = document.querySelector('.slideshow');
+      const images = slideshow.querySelectorAll('img');
 
-.collage-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-}
+      let index = 0;
 
-.collage-item-description {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  right: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 10px;
-  font-size: 14px;
-  text-align: center;
-}
+      setInterval(() => {
+        images.forEach(img => {
+          img.style.transform = `translateX(${index * 100}%)`;
+        });
 
-.item1 {
-  background-image: url('img/ml1.png');
-}
+        index--;
 
-.item2 {
-  background-image: url('img/ml2.png');
-}
+        if (index < -images.length + 1) {
+          index = 0;
+        }
+      }, 3000);
+    </script>
+  </body>
+</html>
 
-.item3 {
-  background-image: url('img/ml3.png');
-}
-
-.item4 {
-  background-image: url('img/ml4.png');
-}
-
-.item5 {
-  background-image: url('img/ml5.png');
-}
-
-.item6 {
-  background-image: url('img/ml6.png');
-}
-
-.item7 {
-  background-image: url('img/ml7.png');
-}
-
-.item8 {
-  background-image: url('img/ml8.png');
-}
-
-.item9 {
-  background-image: url('img/ml9.png');
-}
-</style>
-
-<div class="collage">
-  <div class="collage-item item1"></div>
-  <div class="collage-item item2"></div>
-  <div class="collage-item item3"></div>
-  <div class="collage-item item4"></div>
-  <div class="collage-item item5"></div>
-  <div class="collage-item item6"></div>
-  <div class="collage-item item7"></div>
-  <div class="collage-item item8"></div>
-  <div class="collage-item item9"></div>
-</div>
 
 
 <section id="about" class="container content-section text-center">
@@ -106,61 +72,6 @@
   </div>
   <!-- Agrega más elementos aquí si es necesario -->
 </div>
-
-<style>
-.container {
-  width: 100%;
-  overflow: hidden;
-}
-
-.slide {
-  width: 20%;
-  float: left;
-  animation: slideshow 20s infinite;
-}
-
-@keyframes slideshow {
-  0% {
-    transform: translateX(0);
-  }
-  20% {
-    transform: translateX(0);
-  }
-  21% {
-    transform: translateX(-20%);
-  }
-  41% {
-    transform: translateX(-20%);
-  }
-  42% {
-    transform: translateX(-40%);
-  }
-  62% {
-    transform: translateX(-40%);
-  }
-  63% {
-    transform: translateX(-60%);
-  }
-  83% {
-    transform: translateX(-60%);
-  }
-  84% {
-    transform: translateX(-80%);
-  }
-  100% {
-    transform: translateX(-80%);
-  }
-}
-</style>
-
-<div class="container">
-  <img src="img/ml1.png" class="slide">
-  <img src="img/ml2.png" class="slide">
-  <img src="img/ml3.png" class="slide">
-  <img src="img4.jpg" class="slide">
-  <img src="img5.jpg" class="slide">
-</div>
-
 
 
   
