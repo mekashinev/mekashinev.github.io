@@ -20,26 +20,38 @@
             <a href="https://getbootstrap.com/docs/4.4/getting-started/download/" class="btn btn-warning btn-lg">Bootstrap Framework</a>
 
 
-  <style>
-  a {
-  display: block;
-}
-
-img {
-  border-radius: 50%;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-}
-    }
-  </style>
-  
-</head>
-<body>
-<div style="position:fixed;bottom:20px;right:20px;">
-  <a href="https://wa.me/yourphonenumber">
-    <img src="https://image-url.com/whatsapp-icon.png" width="60px">
-  </a>
-</div>
-
+            <style>
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .col {
+        flex: 1;
+        text-align: center;
+      }
+      .img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .whatsapp-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: green;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    
+    </div>
+    <a href="https://api.whatsapp.com/send?phone=your_phone_number" class="whatsapp-btn">
+      <i class="fa fa-whatsapp"></i>
+    </a>
         </div>
     </div>
 </section>
