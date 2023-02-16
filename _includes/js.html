@@ -11,4 +11,32 @@
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="{{ "/js/grayscale.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/js/grayscale.js" | prepend: site.baseurl }}">
+       
+
+
+
+
+
+
+
+
+
+
+       $(document).ready(function() {
+  // set initial position of each item
+  $('.item').each(function() {
+    var itemToMove = $(this);
+
+    if (itemToMove.hasClass('active')) {
+      itemToMove.css('left', '0');
+    } else {
+      itemToMove.css('left', itemToMove.index() > $('.item.active').index() ? '33%' : '-33%');
+    }
+  });
+
+  // handle slide events
+  $('#myCarousel').on('slide.bs.carousel', function(e) {
+    // get reference to active item and item to
+    </script>
+
