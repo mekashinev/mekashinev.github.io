@@ -23,32 +23,5 @@
 
 
 
-       $(document).ready(function() {
-  // set initial position of each item
-  $('.item').each(function() {
-    var itemToMove = $(this);
-
-    if (itemToMove.hasClass('active')) {
-      itemToMove.css('left', '0');
-    } else {
-      itemToMove.css('left', itemToMove.index() > $('.item.active').index() ? '33%' : '-33%');
-    }
-  });
-
-  // handle slide events
-  $('#myCarousel').on('slide.bs.carousel', function(e) {
-    // get reference to active item and item to
-
-   const slider = document.querySelector('.slider');
-const sliderImages = document.querySelectorAll('.slider img');
-
-let currentSlide = 0;
-const slideInterval = setInterval(nextSlide, 3000);
-
-function nextSlide() {
-  sliderImages[currentSlide].classList.remove('active');
-  currentSlide = (currentSlide + 1) % sliderImages.length;
-  sliderImages[currentSlide].classList.add('active');
-}
     </script>
 
